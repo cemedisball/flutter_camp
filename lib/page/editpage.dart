@@ -237,10 +237,10 @@ class _Admin_EditCampPageState extends State<Admin_EditCampPage> {
                 //     ? const Text('ยังไม่มีรูปภาพที่เลือก.')
                 //     : Image.file(File(_image!)),
                 // SizedBox(height: 20),
-                // ElevatedButton(
-                //   onPressed: _saveChanges,
-                //   child: const Text('บันทึกการเปลี่ยนแปลง'),
-                // ),
+                ElevatedButton(
+                  onPressed: _saveChanges,
+                  child: const Text('บันทึกการเปลี่ยนแปลง'),
+                ),
               ],
             ),
           ),
