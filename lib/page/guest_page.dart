@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_camp/models/camp_model.dart';
 import 'package:flutter_camp/controller/auth_service.dart';
 import 'package:flutter_camp/page/CampDetailPage.dart';
+import 'package:flutter_camp/page/login.dart';
 
 class GuestPage extends StatefulWidget {
   const GuestPage({super.key});
@@ -55,6 +56,33 @@ class _GuestPageState extends State<GuestPage> {
       appBar: AppBar(
         title: const Text('User Page'),
         backgroundColor: const Color.fromARGB(255, 146, 209, 238),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const LoginForm()), // เปลี่ยนไปยังหน้า AdminPage
+              );
+            },
+            child: Text(
+              'Admin',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: const Color.fromARGB(255, 255, 255, 255), // เปลี่ยนสี
+                shadows: [
+                  Shadow(
+                    blurRadius: 10.0,
+                    color: Colors.black45,
+                    offset: Offset(2.0, 2.0),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())

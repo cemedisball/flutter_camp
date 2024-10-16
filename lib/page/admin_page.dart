@@ -3,6 +3,7 @@ import 'package:flutter_camp/main.dart';
 import 'package:flutter_camp/models/camp_model.dart';
 import 'package:flutter_camp/controller/auth_service.dart';
 import 'package:flutter_camp/page/CampDetailPage.dart';
+import 'package:flutter_camp/page/guest_page.dart';
 import 'package:flutter_camp/page/login.dart';
 import 'package:flutter_camp/provider/admin_providers.dart';
 import 'package:http/http.dart' as http;
@@ -146,8 +147,7 @@ class _AdminPageState extends State<AdminPage> {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
-            builder: (context) =>
-                const MyHomePage()), // เปลี่ยนไปหน้า LoginForm
+            builder: (context) => const GuestPage()), // เปลี่ยนไปหน้า LoginForm
         (route) => false, // ลบเส้นทางทั้งหมดใน stack
       );
     }
